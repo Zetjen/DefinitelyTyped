@@ -35,6 +35,7 @@ import UploadItem from "sap/m/upload/UploadItem";
 import DragDropInfo from "sap/ui/core/dnd/DragDropInfo";
 import nextUIUpdate from "sap/ui/test/utils/nextUIUpdate";
 import Link from "sap/m/Link";
+import BaseObject from "sap/ui/base/Object";
 
 /*
  * REMARK: the type definition files are automatically generated and this generation is tested,
@@ -242,3 +243,12 @@ MessageBox.alert("Hello World", { contentWidth: "100px" });
 
 // 1.130
 link.hasLabelableHTMLElement();
+
+// 1.131.1
+const preventDefault: boolean = oUploadDialog.fireBeforeOpen();
+
+// 1.132
+let something: unknown;
+if (BaseObject.isObjectA<Dialog>(something, "sap.m.Dialog")) {
+    something.open();
+}

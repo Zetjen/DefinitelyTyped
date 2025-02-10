@@ -1,4 +1,4 @@
-// For Library Version: 1.130.0
+// For Library Version: 1.132.0
 
 declare module "sap/ui/table/library" {
   import TreeAutoExpandMode1 from "sap/ui/model/TreeAutoExpandMode";
@@ -1974,6 +1974,10 @@ declare module "sap/ui/table/Column" {
      * If this property is set to `true` and the `sortOrder` property is `None`, `sortOrder` is automatically
      * set to `Ascending`. If this property is `true` and `sortOrder` is `None`, the sort indicator is not shown.
      *
+     * **Note:** Even though the `sorted` property has been deprecated, is still required in the UI5 1.x versions
+     * to show the sort indicator. With UI5 2.x, the `sorted` property will be removed and the sort indicator
+     * will be shown based on the `sortOrder`.
+     *
      * Default value is `false`.
      *
      * @deprecated (since 1.120) - replaced by {@link sap.ui.core.SortOrder SortOrder.None} for the `sortOrder`
@@ -2495,6 +2499,10 @@ declare module "sap/ui/table/Column" {
      * If this property is set to `true` and the `sortOrder` property is `None`, `sortOrder` is automatically
      * set to `Ascending`. If this property is `true` and `sortOrder` is `None`, the sort indicator is not shown.
      *
+     * **Note:** Even though the `sorted` property has been deprecated, is still required in the UI5 1.x versions
+     * to show the sort indicator. With UI5 2.x, the `sorted` property will be removed and the sort indicator
+     * will be shown based on the `sortOrder`.
+     *
      * When called with a value of `null` or `undefined`, the default value of the property will be restored.
      *
      * Default value is `false`.
@@ -2684,6 +2692,10 @@ declare module "sap/ui/table/Column" {
      *
      * If this property is set to `true` and the `sortOrder` property is `None`, `sortOrder` is automatically
      * set to `Ascending`. If this property is `true` and `sortOrder` is `None`, the sort indicator is not shown.
+     *
+     * **Note:** Even though the `sorted` property has been deprecated, is still required in the UI5 1.x versions
+     * to show the sort indicator. With UI5 2.x, the `sorted` property will be removed and the sort indicator
+     * will be shown based on the `sortOrder`.
      *
      * @deprecated (since 1.120) - replaced by {@link sap.ui.core.SortOrder SortOrder.None} for the `sortOrder`
      * property
@@ -5476,7 +5488,8 @@ declare module "sap/ui/table/RowSettings" {
      *
      * If the highlight is set to {@link sap.ui.core.MessageType sap.ui.core.MessageType.None} (default), no
      * highlights are visible. Valid values for the `highlight` property are values of the enumerations {@link sap.ui.core.MessageType }
-     * or {@link sap.ui.core.IndicationColor}.
+     * or {@link sap.ui.core.IndicationColor} (only values of `Indication01` to `Indication10` are supported
+     * for accessibility contrast reasons).
      *
      * Accessibility support is provided through the associated {@link sap.ui.table.RowSettings#setHighlightText highlightText }
      * property. If the `highlight` property is set to a value of {@link sap.ui.core.MessageType}, the `highlightText`
@@ -5526,7 +5539,8 @@ declare module "sap/ui/table/RowSettings" {
      *
      * If the highlight is set to {@link sap.ui.core.MessageType sap.ui.core.MessageType.None} (default), no
      * highlights are visible. Valid values for the `highlight` property are values of the enumerations {@link sap.ui.core.MessageType }
-     * or {@link sap.ui.core.IndicationColor}.
+     * or {@link sap.ui.core.IndicationColor} (only values of `Indication01` to `Indication10` are supported
+     * for accessibility contrast reasons).
      *
      * Accessibility support is provided through the associated {@link sap.ui.table.RowSettings#setHighlightText highlightText }
      * property. If the `highlight` property is set to a value of {@link sap.ui.core.MessageType}, the `highlightText`
@@ -5600,7 +5614,8 @@ declare module "sap/ui/table/RowSettings" {
      *
      * If the highlight is set to {@link sap.ui.core.MessageType sap.ui.core.MessageType.None} (default), no
      * highlights are visible. Valid values for the `highlight` property are values of the enumerations {@link sap.ui.core.MessageType }
-     * or {@link sap.ui.core.IndicationColor}.
+     * or {@link sap.ui.core.IndicationColor} (only values of `Indication01` to `Indication10` are supported
+     * for accessibility contrast reasons).
      *
      * Accessibility support is provided through the associated {@link sap.ui.table.RowSettings#setHighlightText highlightText }
      * property. If the `highlight` property is set to a value of {@link sap.ui.core.MessageType}, the `highlightText`
